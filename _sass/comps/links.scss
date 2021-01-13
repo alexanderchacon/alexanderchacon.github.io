@@ -1,4 +1,4 @@
-a, .underline_b, .underline_s {
+a, .underline_b, .underline_s, .ic_menu, .scroll_text span {
     cursor: $cursor;
 }
 
@@ -8,8 +8,9 @@ a {
     margin: 0;
     padding:0;
     letter-spacing: 2px;
-    font-family: $tobias_r-i;
+    font-family: $tobias_l-i;
     position: relative;
+    font-size: 12px;
 }
 
 .underline_b, .underline_s {

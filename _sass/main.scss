@@ -4,21 +4,32 @@
 
 
 @import "comps/header.scss";
+@import "comps/welcome.scss";
 
 html {
     font-family: $tobias_l;
     color: $c_amber;
     font-size: 14px;
     background: $c_gray;
-    letter-spacing: 7px;
+    letter-spacing: 8px;
 }
 
 html, .mega_menu {
     background: url("../img/bg.jpg") top left repeat $c_gray;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .wrapper_global {
     box-sizing: border-box;
-    max-width: 1400px;
+    max-width: 1360px;
     margin: 0 auto;
+}
+
+.wrapper_content {
+    width: 100vw;
+    height: 100vh;
 }

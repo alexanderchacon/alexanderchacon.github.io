@@ -1,3 +1,7 @@
+a, .underline_b, .underline_s {
+    cursor: $cursor;
+}
+
 a {
     color: $c_amber;
     text-decoration: none;
@@ -6,12 +10,9 @@ a {
     letter-spacing: 2px;
     font-family: $tobias_r-i;
     position: relative;
-    cursor: url('../img/cursor.png'), auto;
 }
 
 .underline_b, .underline_s {
-
-    cursor: pointer;
     
     &:before {
         content: "";

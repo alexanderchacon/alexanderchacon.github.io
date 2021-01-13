@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     background: $c_gray;
+    top: -100%;
 
     &-links {
         height: 100%;
@@ -51,6 +52,10 @@
         letter-spacing: 0;
     }
 
+    .icon-dribbble:hover, .icon-behance:hover, .icon-linkedin2:hover {
+        color: $c_amber-d;
+    }
+
     .icon-dribbble:before {
         content: "\eaa7";
         font-size: 17px;
@@ -80,4 +85,3 @@
     }
 
 }
-

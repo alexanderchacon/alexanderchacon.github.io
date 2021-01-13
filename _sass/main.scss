@@ -13,6 +13,10 @@ html {
     letter-spacing: 7px;
 }
 
+html, .mega_menu {
+    background: url("../img/bg.jpg") top left repeat $c_gray;
+}
+
 .wrapper_global {
     box-sizing: border-box;
     max-width: 1400px;

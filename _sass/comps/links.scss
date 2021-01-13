@@ -1,0 +1,52 @@
+a {
+    color: $c_amber;
+    text-decoration: none;
+    margin: 0;
+    padding:0;
+    letter-spacing: 2px;
+    font-family: $tobias_r-i;
+    position: relative;
+    cursor: url('../img/cursor.png'), auto;
+}
+
+.underline_b, .underline_s {
+
+    cursor: pointer;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        background: $c_amber;
+        transition: bottom 0.3s;
+    }
+}
+
+.underline_b {
+
+    position: relative;
+    display: table;
+
+    &:before {
+        height: 2px;
+        bottom: -6px;
+    }
+
+    &:hover:before {
+        bottom: 24px;
+    }
+
+}
+
+.underline_s {
+
+    &:before {
+        height: 1px;
+        bottom: -4px;
+    }
+
+    &:hover:before {
+        bottom: 7px;
+    }
+
+}

@@ -1,3 +1,17 @@
-html {
-    background: red;
-}
+/*** COLORS ***/
+
+$c_amber: #F1E5D4;
+$c_gray: #2C2C2C;
+
+/*** FONTS ***/
+
+$tobias_alternatives: "Times New Roman", "Georgia";
+
+$tobias_l: "tobias_l", $tobias_alternatives;
+$tobias_l-i: "tobias_l-i", $tobias_alternatives;
+$tobias_r: "tobias_r", $tobias_alternatives;
+$tobias_r-i: "tobias_r-i", $tobias_alternatives;
+$tobias_sb: "tobias_sb", $tobias_alternatives;
+$tobias_sb-i: "tobias_sb-i", $tobias_alternatives;
+$tobias_b: "tobias_b", $tobias_alternatives;
+$tobias_b-i: "tobias_b-i", $tobias_alternatives;

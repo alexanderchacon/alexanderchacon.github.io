@@ -1,6 +1,16 @@
+@import "comps/fonts.scss";
 @import "comps/var.scss";
 
-h1 {
-    font-size: 100px;
-    letter-spacing: 10px;
-} 
+@import "comps/header.scss";
+
+html {
+    font-family: $tobias_l;
+    color: $c_amber;
+    font-size: 14px;
+    background: $c_gray;
+}
+
+a {
+    color: $c_amber;
+    text-decoration: none;
+}

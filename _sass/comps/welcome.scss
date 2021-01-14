@@ -67,9 +67,20 @@
             margin-left: 142px;
             font-size: 12px;
 
-            a {
-                margin-right: 25px;
-                font-family: $tobias_l-i;
+            .about_me, .work_me {
+                position: relative;
+                display: table;
+                float: left;
+
+                &:before {
+                    content: "";
+                    width: 93%;
+                }
+
+            }
+
+            .about_me {
+                margin-right: 38px;
             }
 
         }
@@ -79,6 +90,20 @@
     &-image {
         font-family: $tobias_l;
         letter-spacing: 2px;
+
+        .wrapper_img-welcome {
+            position: relative;
+            height: 550px;
+
+            #img_welcome {
+                position: absolute;
+                top:50%; 
+                left:50%;
+                perspective-origin: center center;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+        }
 
         .copy_image {
             margin-top: 10px;

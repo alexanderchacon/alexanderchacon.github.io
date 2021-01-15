@@ -37,5 +37,31 @@
     <div class="scroll_text"><span>Scroll to discover</span></div>
 
 </div>
+
+<div class="wrapper_content wrapper_content-work">
+
+    <div class="row middle-xs wrapper_global">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+            <div class="wrapper_content-work-img">
+
+                <h5>My Work.</h5>
+
+                <ul>
+                    {% for post in site.posts reversed %}
+                    <li><a href="{{ post.url }}" class="underline_s">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
     
 {% include footer_data.html %}

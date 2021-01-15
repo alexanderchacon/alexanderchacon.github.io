@@ -30,7 +30,7 @@ $(function(){
 
     /**** VAR LOAD IMAGES ****/
 
-    var background_image = document.querySelectorAll("[data-url]")  
+    var background_image = document.querySelectorAll('[data-url]')  
     var $container_work = $('#wrapper_work-img');
 
     $('.work_link').hover(function(e) {
@@ -40,8 +40,8 @@ $(function(){
 
         image.onload = function() {
             $container_work.css({
-                "opacity": '1',
-                "background-image": 'url(' + e.target.dataset.url + ')'
+                'opacity': '1',
+                'background-image': 'url(' + e.target.dataset.url + ')'
         
             });
         };
@@ -52,7 +52,7 @@ $(function(){
 
         $container_work.css({
             "opacity": '0',
-        });
+        })
 
     });
 

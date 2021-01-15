@@ -42,13 +42,15 @@ a {
 
 .underline_s {
 
+    padding-bottom: 4px;
+
     &:before {
         height: 1px;
-        bottom: -4px;
+        bottom: 0px;
     }
 
     &:hover:before {
-        bottom: 7px;
+        bottom: 10px;
     }
 
 }

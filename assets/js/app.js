@@ -1,5 +1,18 @@
 $(function(){
 
+    /**** PRELOAD IMAGE ****/
+
+    var preloadImgs = [];
+    $(document).ready(function() {
+        $('.work_link').each(function() {
+            var img = new Image();
+            img.src = $(this).data('url');
+            preloadImgs.push(img);
+        });
+    });
+
+    /**** ROTATION IMAGE ****/
+
     var rotate = 13;
 
     var pageX = $(document).width();
@@ -15,11 +28,38 @@ $(function(){
     $('#img_welcome').css({ 'transform' : 'translate(-50%, -50%) scale(1) perspective( 1960px ) rotateY('+rotateY+'deg) rotateX('+rotateX+'deg)'});
     });
 
+    /**** VAR LOAD IMAGES ****/
 
+    var background_image = document.querySelectorAll("[data-url]")  
+    var $container_work = $('#wrapper_work-img');
+
+    $('.work_link').hover(function(e) {
+
+        var image = new Image();
+        image.crossororigin = 'Anonymous';
+
+        image.onload = function() {
+            $container_work.css({
+                "opacity": '1',
+                "background-image": 'url(' + e.target.dataset.url + ')'
+        
+            });
+        };
+
+        image.src = e.target.dataset.url;
+
+    }, function() {
+
+        $container_work.css({
+            "opacity": '0',
+        });
+
+    });
 
   
 });
 
+/*
 
 jQuery(function($) {
 
@@ -51,15 +91,11 @@ jQuery(function($) {
 
     }
 
-/******************************* LOAD IMAGES ON CONTAINER *******************************/
-
 if($(window).innerWidth() <= 768) {
 
 } else {
 $('#wrapper_work-loaded').css('background-image', 'url("' + background_image[0].dataset['url'] + '")');
 }
-
-/******************************* CHANGE IMAGES ON CONTAINER *******************************/
 
     var $container_work = $('#wrapper_work-loaded');
 
@@ -84,3 +120,5 @@ $('#wrapper_work-loaded').css('background-image', 'url("' + background_image[0].
 
 
 });
+
+*/

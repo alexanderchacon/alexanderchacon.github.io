@@ -46,13 +46,19 @@
 
             <div class="wrapper_content-work-img" >
 
-                <h5>My Work.</h5>
+                <div class="wrapper_content-text">
 
-                <ul>
-                    {% for post in site.posts reversed %}
-                        <li><a href="{{ post.url }}" class="underline_s" data-url="{{ post.img_url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
+                    <h5>My Work.</h5>
+
+                    <ul>
+                        {% for post in site.posts reversed %}
+                            <li><a href="{{ post.url }}" class="work_link underline_s" data-url="{{ post.img_url }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+
+                <div id="wrapper_work-img"></div> 
 
             </div>
 

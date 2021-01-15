@@ -21,7 +21,7 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-            transition: 0.4s;
+            transition: 0.5s;
             opacity: 0;
             left: -100px;
         }
@@ -42,6 +42,16 @@
                 li {
                     
                     margin-bottom: 32px;
+
+                    .work_link {
+                        opacity: 1;
+                        transition: 0.1s;
+                    }
+
+                    .work_link-change:before {
+                        content: "";
+                        background: #2C2C2C;
+                    }
     
                     &:last-child {
                         margin-bottom: 0;

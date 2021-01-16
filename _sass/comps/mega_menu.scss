@@ -8,7 +8,9 @@
     flex-direction: column;
     justify-content: space-between;
     background: $c_gray;
-    top: -100%;
+    opacity: 0;
+    top: -125%;
+    transition: $t_global;
 
     &-links {
         height: 100%;
@@ -18,10 +20,12 @@
     &-close {
         position: absolute;
         right: 0;
-        margin: 30px 30px 0 0 ;
+        margin: 55px 38px 0 0 ;
         letter-spacing: 2px;
         font-family: $tobias_r-i;
         z-index: 9999;
+        letter-spacing: 2px;
+        
     }
 
     .row {
@@ -41,7 +45,6 @@
 .footer_social {
 
     a {
-
         .icon_footer-social {
             font-size: 20px;
         }
@@ -54,6 +57,7 @@
 
     .icon-dribbble:hover, .icon-behance:hover, .icon-linkedin2:hover {
         color: $c_amber-d;
+        transition: 1s;
     }
 
     .icon-dribbble:before {

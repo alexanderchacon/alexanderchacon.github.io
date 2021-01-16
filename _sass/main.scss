@@ -4,6 +4,7 @@
 
 
 @import "comps/header.scss";
+@import "comps/mega_menu.scss";
 @import "comps/about.scss";
 @import "comps/welcome.scss";
 @import "comps/work.scss";
@@ -16,7 +17,7 @@ html {
     letter-spacing: 8px;
 }
 
-html, .mega_menu, .about_wrapper {
+html, .g_bg{
     background: url("../img/bg.jpg") top left repeat $c_gray;
 }
 
@@ -34,4 +35,8 @@ img {
 .wrapper_content {
     width: 100vw;
     height: 100vh;
+}
+
+.mega_menu, .about_wrapper {
+    box-shadow: 0 52px 125px rgba(0,0,0,0.6);
 }

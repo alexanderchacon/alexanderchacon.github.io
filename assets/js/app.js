@@ -75,6 +75,57 @@ $(function(){
             'color': '#cabca7'
         })
 
-	});
+    });
+    
+    /**** BUTTONS ****/
+
+    var g_transition = '0.8s ease';
+
+    $('.ic_menu').click(function() {
+
+        $('.mega_menu').css({
+            'top': '0',
+            'opacity': '1'
+        });
+
+    });
+
+    $('.mega_menu-close').click(function() {
+
+        $('.mega_menu').css({
+            'top': '-125%',
+            'opacity': '0'
+        });
+
+        $('.about_wrapper').css({
+            'left': '-125%',
+            'opacity': '0'
+        });
+
+        $('.wrapper_content-welcome').css({
+            'left': '0',
+            'top': '0',
+            'opacity': '1',
+            'transition': g_transition
+        });
+
+    });
+
+    $('.about_me').click(function() {
+
+        $('.about_wrapper').css({
+            'left': '0',
+            'opacity': '1'
+        });
+
+        $('.wrapper_content-welcome').css({
+            'left': '-10%',
+            'opacity': '0',
+            'transition': g_transition
+        });
+
+    });
+
+
 
 });

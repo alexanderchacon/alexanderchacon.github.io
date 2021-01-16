@@ -4,6 +4,7 @@
 
 
 @import "comps/header.scss";
+@import "comps/about.scss";
 @import "comps/welcome.scss";
 @import "comps/work.scss";
 
@@ -15,7 +16,7 @@ html {
     letter-spacing: 8px;
 }
 
-html, .mega_menu {
+html, .mega_menu, .about_wrapper {
     background: url("../img/bg.jpg") top left repeat $c_gray;
 }
 

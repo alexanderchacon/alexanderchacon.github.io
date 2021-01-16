@@ -1,0 +1,29 @@
+.about_wrapper {
+
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+
+    .row {
+        height: 100%;
+        position: relative;
+    }
+
+    h1 {
+
+        background: -webkit-linear-gradient(90deg, rgba(241,229,212,1) 0%, rgba(241,229,212,0.5) 50%, rgba(241,229,212,0) 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        margin: 0;
+        line-height: 130px;
+
+        &:first-child {
+            margin-top: 100px;
+        }
+
+    }
+
+
+}

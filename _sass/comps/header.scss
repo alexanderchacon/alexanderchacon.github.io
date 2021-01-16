@@ -49,6 +49,8 @@ header {
         justify-content: space-between;
         height: 16px;
         width: 26px;
+        opacity: 1;
+        transition: $t_global;
 
         div {
             width: 100%;

@@ -79,18 +79,71 @@ $(function(){
     
     /**** BUTTONS ****/
 
-    var g_transition = '0.8s ease';
+    var data_wel = 0;
 
     $('.ic_menu').click(function() {
+
+        $(this).css({
+            'opacity': '0'
+        });
+
+        if ( data_wel == 0 ) {
+
+            $('.wrapper_content-welcome').css({
+                'top': '-10%',
+                'opacity': '0'
+            });
+
+        }
 
         $('.mega_menu').css({
             'top': '0',
             'opacity': '1'
         });
 
+        $('.mega_menu-close').delay(650).queue(function (next) { 
+            $(this).css({
+                'opacity': '1'
+            });
+            next();
+        });
+
+        $('.wrapper_content-work').css({
+            'opacity': '0'
+        });
+
     });
 
-    $('.mega_menu-close').click(function() {
+    $('.mega_menu-close, .about').click(function() {
+
+        if ( data_wel == 1 ) {
+
+            $('.wrapper_content-welcome').css({
+                'top': '-115%',
+                'opacity': '0'
+            });
+
+            $('.wrapper_content-work').css({
+                'opacity': '1'
+            });
+
+        } else {
+
+            $('.wrapper_content-welcome').css({
+                'left': '0',
+                'top': '0',
+                'opacity': '1'
+            });
+
+        }
+
+        $('.ic_menu').css({
+            'opacity': '1'
+        });
+
+        $('.mega_menu-close').css({
+            'opacity': '0'
+        });
 
         $('.mega_menu').css({
             'top': '-125%',
@@ -102,16 +155,13 @@ $(function(){
             'opacity': '0'
         });
 
-        $('.wrapper_content-welcome').css({
-            'left': '0',
-            'top': '0',
-            'opacity': '1',
-            'transition': g_transition
-        });
-
     });
 
-    $('.about_me').click(function() {
+    $('.about_me, .about').click(function() {
+
+        $('.ic_menu').css({
+            'opacity': '0'
+        });
 
         $('.about_wrapper').css({
             'left': '0',
@@ -120,12 +170,105 @@ $(function(){
 
         $('.wrapper_content-welcome').css({
             'left': '-10%',
-            'opacity': '0',
-            'transition': g_transition
+            'opacity': '0'
+        });
+
+        $('.mega_menu-close').delay(650).queue(function (next) { 
+            $(this).css({
+                'opacity': '1'
+            });
+            next();
         });
 
     });
 
+    $('.work_me, .work').click(function(){
 
+        data_wel = 1;
+
+        $('.mega_menu').css({
+            'top': '-125%',
+            'opacity': '0'
+        });
+
+        $('.ic_menu').css({
+            'opacity': '1'
+        });
+
+        $('.wrapper_content-welcome').css({
+            'top': '-115%',
+            'opacity': '0'
+        });
+
+        $('.wrapper_content-work').delay(350).queue(function (next) { 
+            $(this).css({
+                'opacity': '1'
+            });
+            next();
+        });
+
+    });
+
+    /**** SCOLL ****/
+
+    $(window).bind('mousewheel', function(e){
+
+        if(e.originalEvent.wheelDelta /120 > 0) {
+
+            data_wel = 0;
+
+            $('.wrapper_content-welcome').css({
+                'top': '0',
+                'opacity': '1',
+                'left': '0'
+            });
+
+            $('.wrapper_content-work').delay(350).queue(function (next) { 
+                $(this).css({
+                    'opacity': '0'
+                });
+
+                next();
+
+            });
+
+            $('.ic_menu').css({
+                'opacity': '1'
+            });
+
+            $('.about_wrapper').css({
+                'left': '-115%',
+                'opacity': '0'
+            });
+
+        } else {
+
+            data_wel = 1;
+
+           $('.wrapper_content-welcome').css({
+                'top': '-115%',
+                'opacity': '0',
+                'left': '0'
+            });
+
+            $('.wrapper_content-work').delay(350).queue(function (next) { 
+                $(this).css({
+                    'opacity': '1'
+                });
+                next();
+            });
+
+            $('.ic_menu').css({
+                'opacity': '1'
+            });
+
+            $('.about_wrapper').css({
+                'left': '-115%',
+                'opacity': '0'
+            });
+
+        };
+
+    });
 
 });

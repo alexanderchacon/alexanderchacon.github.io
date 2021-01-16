@@ -25,7 +25,8 @@
         font-family: $tobias_r-i;
         z-index: 9999;
         letter-spacing: 2px;
-        
+        opacity: 0;
+        transition: $t_global;
     }
 
     .row {

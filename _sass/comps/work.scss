@@ -1,5 +1,8 @@
 .wrapper_content-work {
 
+    opacity: 0;
+    transition: $t_global;
+
     .row {
         height: 100%;
         position: relative;

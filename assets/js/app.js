@@ -159,6 +159,22 @@ $(function(){
 
     $('.about_me, .about').click(function() {
 
+        if ( $('.wrapper_content-welcome').css('top') != '0px' ){
+
+            $('.wrapper_content-welcome').css({
+                'left': '0px',
+                'opacity': '0'
+            });
+
+        } else {
+
+            $('.wrapper_content-welcome').css({
+                'left': '-10%',
+                'opacity': '0'
+            });
+
+        }
+
         $('.ic_menu').css({
             'opacity': '0'
         });
@@ -166,11 +182,6 @@ $(function(){
         $('.about_wrapper').css({
             'left': '0',
             'opacity': '1'
-        });
-
-        $('.wrapper_content-welcome').css({
-            'left': '-10%',
-            'opacity': '0'
         });
 
         $('.mega_menu-close').delay(650).queue(function (next) { 

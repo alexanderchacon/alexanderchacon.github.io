@@ -1,0 +1,29 @@
+@import "comps/var.scss";
+
+@media only screen and (max-width:1366px) and (max-height: 657px) {
+
+    /**** GLOBAL ****/
+    .wrapper_global {
+        width: 1050px;
+    }
+
+    /**** WELCOME ****/
+
+    h2 {
+        font-size: $font_size-h2_1366;
+    }
+
+
+    /**** WORK ****/
+
+    .wrapper_content-work-img {
+        height: 300px!important;
+    }
+
+    #wrapper_work-img {
+        width: calc(100% /* + 200px */);
+        height: 20%;
+    }
+
+}
+

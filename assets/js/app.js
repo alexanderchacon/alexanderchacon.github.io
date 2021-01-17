@@ -224,59 +224,51 @@ $(function(){
 
     $(window).bind('mousewheel', function(e){
 
-        if(e.originalEvent.wheelDelta /120 > 0) {
+        if ( e.originalEvent.wheelDelta /120 > 0 ) {
 
-            data_wel = 0;
+            if ( $('.ic_menu').css('opacity') == '1' ) {
 
-            $('.wrapper_content-welcome').css({
-                'top': '0',
-                'opacity': '1',
-                'left': '0'
-            });
-
-            $('.wrapper_content-work').delay(350).queue(function (next) { 
-                $(this).css({
+                data_wel = 0;
+    
+                $('.wrapper_content-welcome').css({
+                    'top': '0',
+                    'opacity': '1',
+                    'left': '0'
+                });
+    
+                $('.wrapper_content-work').css({
+                    'opacity': '0'
+                });
+    
+                $('.about_wrapper').css({
+                    'left': '-115%',
                     'opacity': '0'
                 });
 
-                next();
-
-            });
-
-            $('.ic_menu').css({
-                'opacity': '1'
-            });
-
-            $('.about_wrapper').css({
-                'left': '-115%',
-                'opacity': '0'
-            });
+            }
 
         } else {
 
-            data_wel = 1;
+            if ( $('.ic_menu').css('opacity') == '1' ) {
 
-           $('.wrapper_content-welcome').css({
-                'top': '-115%',
-                'opacity': '0',
-                'left': '0'
-            });
+                data_wel = 1;
 
-            $('.wrapper_content-work').delay(350).queue(function (next) { 
-                $(this).css({
+                $('.wrapper_content-welcome').css({
+                    'top': '-115%',
+                    'opacity': '0',
+                    'left': '0'
+                });
+    
+                $('.wrapper_content-work').css({
                     'opacity': '1'
                 });
-                next();
-            });
-
-            $('.ic_menu').css({
-                'opacity': '1'
-            });
-
-            $('.about_wrapper').css({
-                'left': '-115%',
-                'opacity': '0'
-            });
+    
+                $('.about_wrapper').css({
+                    'left': '-115%',
+                    'opacity': '0'
+                });
+                
+            }
 
         };
 
